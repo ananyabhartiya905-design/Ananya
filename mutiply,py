@@ -1,0 +1,13 @@
+import gradio as gr
+
+def generate_table(n):
+    table = ""
+    for i in range(1,100):
+        table += f"{n} * {i} = {n*i}\n"
+    return table
+
+app = gr.Interface(
+    fn = generate_table,
+    inputs = gr.number(label = "Enter a Number"),
+    outputs = gr.Textbox(label = "Multiplication table")
+)
