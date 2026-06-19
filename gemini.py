@@ -1,4 +1,4 @@
-from google import genai
+import google.genai as genai
 import streamlit as st
 
 API_KEY = st.secrets["GEMINI_API_KEY"]
